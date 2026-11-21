@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 432 290" width="100%" fill="none">
+  <defs>
+    <linearGradient id="cardBgFlood" x1="0" y1="0" x2="432" y2="290" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#090F1D"/>
+      <stop offset="100%" stop-color="#0D1526"/>
+    </linearGradient>
+    <radialGradient id="glowCyan" cx="0.85" cy="0.15" r="0.65">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="borderFlood" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.55"/>
+      <stop offset="50%" stop-color="#818CF8" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.10"/>
+    </linearGradient>
+    <clipPath id="clipFlood">
+      <rect width="432" height="290" rx="18"/>
+    </clipPath>
+  </defs>
+
+  <style>
+    .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+    @keyframes flowDash {
+      to { stroke-dashoffset: -24; }
+    }
+    .flow-line {
+      stroke-dasharray: 5 5;
+      animation: flowDash 1.4s linear infinite;
+    }
+  </style>
+
+  <g clip-path="url(#clipFlood)">
+    <rect width="432" height="290" fill="url(#cardBgFlood)"/>
+    <rect width="432" height="290" fill="url(#glowCyan)"/>
+    <rect x="0.75" y="0.75" width="430.5" height="288.5" rx="18" stroke="url(#borderFlood)" stroke-width="1.5"/>
+
+    <!-- Top Badge Row -->
+    <g transform="translate(22, 22)">
+      <rect width="142" height="24" rx="12" fill="#38BDF8" fill-opacity="0.14" stroke="#38BDF8" stroke-opacity="0.35"/>
+      <text x="71" y="16" text-anchor="middle" class="mono" font-size="10.5" font-weight="700" fill="#7DD3FC">ML • RISK MAPPING</text>
+
+      <text x="388" y="16" text-anchor="end" class="mono" font-size="11" font-weight="600" fill="#94A3B8">↗ View Repo</text>
+    </g>
+
+    <!-- Title & Subtitle -->
+    <text x="22" y="76" class="sans" font-size="21" font-weight="800" fill="#F8FAFC">🌊 Flood Prediction System</text>
+    <text x="22" y="99" class="sans" font-size="12.5" fill="#94A3B8">End-to-end Random Forest flood forecasting &amp; interactive</text>
+    <text x="22" y="116" class="sans" font-size="12.5" fill="#94A3B8">risk-mapping REST service with real-time prediction UI.</text>
+
+    <!-- Animated Architecture Mini-Diagram Box -->
+    <rect x="22" y="132" width="388" height="76" rx="12" fill="#060A14" fill-opacity="0.85" stroke="#FFFFFF" stroke-opacity="0.10"/>
+    <text x="34" y="149" class="mono" font-size="9.5" font-weight="700" letter-spacing="0.8" fill="#64748B">PREDICTION &amp; MAPPING FLOW</text>
+
+    <!-- Node 1 -->
+    <rect x="34" y="159" width="80" height="36" rx="7" fill="#0F172A" stroke="#38BDF8" stroke-opacity="0.45"/>
+    <text x="74" y="175" text-anchor="middle" class="mono" font-size="9.5" font-weight="700" fill="#7DD3FC">Features</text>
+    <text x="74" y="188" text-anchor="middle" class="mono" font-size="8.5" fill="#94A3B8">Hydro Data</text>
+
+    <!-- Animated Connector 1->2 -->
+    <line x1="114" y1="177" x2="136" y2="177" stroke="#38BDF8" stroke-width="1.6" class="flow-line"/>
+
+    <!-- Node 2 -->
+    <rect x="136" y="159" width="86" height="36" rx="7" fill="#0F172A" stroke="#818CF8" stroke-opacity="0.45"/>
+    <text x="179" y="175" text-anchor="middle" class="mono" font-size="9.5" font-weight="700" fill="#C7D2FE">RF Model</text>
+    <text x="179" y="188" text-anchor="middle" class="mono" font-size="8.5" fill="#94A3B8">Scikit-Learn</text>
+
+    <!-- Animated Connector 2->3 -->
+    <line x1="222" y1="177" x2="244" y2="177" stroke="#818CF8" stroke-width="1.6" class="flow-line"/>
+
+    <!-- Node 3 -->
+    <rect x="244" y="159" width="76" height="36" rx="7" fill="#0F172A" stroke="#34D399" stroke-opacity="0.45"/>
+    <text x="282" y="175" text-anchor="middle" class="mono" font-size="9.5" font-weight="700" fill="#6EE7B7">Flask API</text>
+    <text x="282" y="188" text-anchor="middle" class="mono" font-size="8.5" fill="#94A3B8">/predict</text>
+
+    <!-- Animated Connector 3->4 -->
+    <line x1="320" y1="177" x2="340" y2="177" stroke="#34D399" stroke-width="1.6" class="flow-line"/>
+
+    <!-- Node 4 -->
+    <rect x="340" y="159" width="58" height="36" rx="7" fill="#0F172A" stroke="#38BDF8" stroke-opacity="0.45"/>
+    <text x="369" y="175" text-anchor="middle" class="mono" font-size="9.5" font-weight="700" fill="#BAE6FD">Risk UI</text>
+    <text x="369" y="188" text-anchor="middle" class="mono" font-size="8.5" fill="#94A3B8">Map View</text>
+
+    <!-- Bottom Tech Pills -->
+    <g transform="translate(22, 224)">
+      <rect width="68" height="22" rx="6" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.12"/>
+      <text x="34" y="15" text-anchor="middle" class="mono" font-size="10" fill="#E2E8F0">Python</text>
+
+      <rect x="75" width="62" height="22" rx="6" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.12"/>
+      <text x="106" y="15" text-anchor="middle" class="mono" font-size="10" fill="#E2E8F0">Flask</text>
+
+      <rect x="144" width="102" height="22" rx="6" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.12"/>
+      <text x="195" y="15" text-anchor="middle" class="mono" font-size="10" fill="#E2E8F0">Scikit-Learn</text>
+
+      <rect x="253" width="90" height="22" rx="6" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.12"/>
+      <text x="298" y="15" text-anchor="middle" class="mono" font-size="10" fill="#E2E8F0">JavaScript</text>
+    </g>
+
+    <text x="22" y="272" class="mono" font-size="10.5" fill="#64748B">Endpoints: /predict • /risk-map • /historical</text>
+  </g>
+</svg>

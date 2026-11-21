@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 290" width="100%" fill="none">
+  <defs>
+    <!-- Background & Ambient Glows -->
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="880" y2="290" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#070B14"/>
+      <stop offset="50%" stop-color="#0B1120"/>
+      <stop offset="100%" stop-color="#080D1A"/>
+    </linearGradient>
+
+    <radialGradient id="orbBlue" cx="0.18" cy="0.22" r="0.55">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="orbPurple" cx="0.85" cy="0.78" r="0.55">
+      <stop offset="0%" stop-color="#818CF8" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#818CF8" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Glass Card Fills & Gradient Borders -->
+    <linearGradient id="glassFill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.065"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.02"/>
+    </linearGradient>
+
+    <linearGradient id="glassBorderMain" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.55"/>
+      <stop offset="50%" stop-color="#818CF8" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#34D399" stop-opacity="0.40"/>
+    </linearGradient>
+
+    <linearGradient id="glassBorderSub" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.05"/>
+    </linearGradient>
+
+    <linearGradient id="nameGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="65%" stop-color="#E2E8F0"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+
+    <!-- Subtle Dot Grid -->
+    <pattern id="dotGrid" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#94A3B8" fill-opacity="0.14"/>
+    </pattern>
+
+    <clipPath id="outerClip">
+      <rect x="0" y="0" width="880" height="290" rx="20"/>
+    </clipPath>
+  </defs>
+
+  <style>
+    .sans { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+    @keyframes pulseRing {
+      0% { transform: scale(1); opacity: 0.75; }
+      70% { transform: scale(2.2); opacity: 0; }
+      100% { transform: scale(2.2); opacity: 0; }
+    }
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-4px); }
+    }
+    .pulse-ring {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: pulseRing 2.4s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+    }
+    .float-badge {
+      animation: floatSlow 5s ease-in-out infinite;
+    }
+  </style>
+
+  <g clip-path="url(#outerClip)">
+    <!-- Base Canvas -->
+    <rect width="880" height="290" fill="url(#bgGrad)"/>
+    <rect width="880" height="290" fill="url(#dotGrid)"/>
+    <rect width="880" height="290" fill="url(#orbBlue)"/>
+    <rect width="880" height="290" fill="url(#orbPurple)"/>
+
+    <!-- Outer subtle frame -->
+    <rect x="0.75" y="0.75" width="878.5" height="288.5" rx="20" stroke="#FFFFFF" stroke-opacity="0.08" stroke-width="1.5"/>
+
+    <!-- LEFT MAIN BENTO TILE (x=18, y=18, w=540, h=254) -->
+    <rect x="18" y="18" width="540" height="254" rx="16" fill="url(#glassFill)" stroke="url(#glassBorderMain)" stroke-width="1.2"/>
+
+    <!-- Status Pill -->
+    <g transform="translate(40, 40)">
+      <rect width="278" height="28" rx="14" fill="#10B981" fill-opacity="0.12" stroke="#10B981" stroke-opacity="0.35" stroke-width="1"/>
+      <circle cx="16" cy="14" r="4" fill="#34D399" class="pulse-ring"/>
+      <circle cx="16" cy="14" r="4" fill="#34D399"/>
+      <text x="29" y="18" class="mono" font-size="11.5" font-weight="600" fill="#6EE7B7">OPEN TO SWE &amp; AI/ML ROLES • 2026</text>
+    </g>
+
+    <!-- Handle Pill -->
+    <g transform="translate(428, 40)" class="float-badge">
+      <rect width="108" height="28" rx="14" fill="#38BDF8" fill-opacity="0.10" stroke="#38BDF8" stroke-opacity="0.28" stroke-width="1"/>
+      <text x="54" y="18" text-anchor="middle" class="mono" font-size="11.5" font-weight="600" fill="#7DD3FC">@COOLNUTTT</text>
+    </g>
+
+    <!-- Name & Role -->
+    <text x="40" y="118" class="sans" font-size="38" font-weight="800" letter-spacing="-0.8" fill="url(#nameGrad)">Sameer Makani</text>
+    <text x="40" y="146" class="sans" font-size="15.5" font-weight="600" fill="#94A3B8">
+      4th Year B.Tech CSE  <tspan fill="#38BDF8">•</tspan>  AI/ML &amp; Full-Stack Engineer
+    </text>
+
+    <!-- Tagline -->
+    <text x="40" y="182" class="sans" font-size="13.5" fill="#CBD5E1">I engineer privacy-first, explainable AI systems and</text>
+    <text x="40" y="202" class="sans" font-size="13.5" fill="#CBD5E1">production-minded full-stack web applications.</text>
+
+    <!-- Bottom Highlight Chips inside Main Tile -->
+    <g transform="translate(40, 224)">
+      <rect width="142" height="28" rx="8" fill="#0F172A" fill-opacity="0.8" stroke="#FFFFFF" stroke-opacity="0.12"/>
+      <text x="71" y="18" text-anchor="middle" class="mono" font-size="11" fill="#E2E8F0">⚡ On-Device AI</text>
+
+      <rect x="152" width="166" height="28" rx="8" fill="#0F172A" fill-opacity="0.8" stroke="#FFFFFF" stroke-opacity="0.12"/>
+      <text x="235" y="18" text-anchor="middle" class="mono" font-size="11" fill="#E2E8F0">🧠 Explainable ML</text>
+
+      <rect x="328" width="168" height="28" rx="8" fill="#0F172A" fill-opacity="0.8" stroke="#FFFFFF" stroke-opacity="0.12"/>
+      <text x="412" y="18" text-anchor="middle" class="mono" font-size="11" fill="#E2E8F0">🚀 Full-Stack APIs</text>
+    </g>
+
+    <!-- TOP-RIGHT BENTO TILE (x=574, y=18, w=288, h=120) -->
+    <rect x="574" y="18" width="288" height="120" rx="16" fill="url(#glassFill)" stroke="url(#glassBorderSub)" stroke-width="1.2"/>
+    <text x="594" y="44" class="mono" font-size="11" font-weight="700" letter-spacing="1.2" fill="#38BDF8">ENGINEERING FOCUS</text>
+    <line x1="594" y1="54" x2="842" y2="54" stroke="#FFFFFF" stroke-opacity="0.08"/>
+
+    <circle cx="600" cy="74" r="3" fill="#34D399"/>
+    <text x="612" y="78" class="sans" font-size="12.5" font-weight="500" fill="#E2E8F0">CPU/Web Inference (ONNX)</text>
+
+    <circle cx="600" cy="97" r="3" fill="#38BDF8"/>
+    <text x="612" y="101" class="sans" font-size="12.5" font-weight="500" fill="#E2E8F0">FastAPI + Next.js 15 Systems</text>
+
+    <circle cx="600" cy="120" r="3" fill="#818CF8"/>
+    <text x="612" y="124" class="sans" font-size="12.5" font-weight="500" fill="#E2E8F0">Spatial &amp; Vector DBs (PostGIS)</text>
+
+    <!-- BOTTOM-RIGHT BENTO TILE (x=574, y=152, w=288, h=120) -->
+    <rect x="574" y="152" width="288" height="120" rx="16" fill="url(#glassFill)" stroke="url(#glassBorderSub)" stroke-width="1.2"/>
+    <text x="594" y="178" class="mono" font-size="11" font-weight="700" letter-spacing="1.2" fill="#818CF8">CORE STACK</text>
+    <line x1="594" y1="188" x2="842" y2="188" stroke="#FFFFFF" stroke-opacity="0.08"/>
+
+    <!-- Row 1 Pills -->
+    <g transform="translate(594, 200)">
+      <rect width="74" height="24" rx="6" fill="#38BDF8" fill-opacity="0.14" stroke="#38BDF8" stroke-opacity="0.35"/>
+      <text x="37" y="16" text-anchor="middle" class="mono" font-size="11" font-weight="600" fill="#BAE6FD">Python</text>
+
+      <rect x="82" width="90" height="24" rx="6" fill="#818CF8" fill-opacity="0.14" stroke="#818CF8" stroke-opacity="0.35"/>
+      <text x="127" y="16" text-anchor="middle" class="mono" font-size="11" font-weight="600" fill="#C7D2FE">TypeScript</text>
+
+      <rect x="180" width="68" height="24" rx="6" fill="#34D399" fill-opacity="0.14" stroke="#34D399" stroke-opacity="0.35"/>
+      <text x="214" y="16" text-anchor="middle" class="mono" font-size="11" font-weight="600" fill="#A7F3D0">FastAPI</text>
+    </g>
+
+    <!-- Row 2 Pills -->
+    <g transform="translate(594, 232)">
+      <rect width="84" height="24" rx="6" fill="#F8FAFC" fill-opacity="0.09" stroke="#FFFFFF" stroke-opacity="0.2"/>
+      <text x="42" y="16" text-anchor="middle" class="mono" font-size="11" font-weight="600" fill="#F1F5F9">Next.js</text>
+
+      <rect x="92" width="66" height="24" rx="6" fill="#38BDF8" fill-opacity="0.14" stroke="#38BDF8" stroke-opacity="0.35"/>
+      <text x="125" y="16" text-anchor="middle" class="mono" font-size="11" font-weight="600" fill="#BAE6FD">ONNX</text>
+
+      <rect x="166" width="82" height="24" rx="6" fill="#F59E0B" fill-opacity="0.14" stroke="#F59E0B" stroke-opacity="0.35"/>
+      <text x="207" y="16" text-anchor="middle" class="mono" font-size="11" font-weight="600" fill="#FDE68A">Docker</text>
+    </g>
+  </g>
+</svg>
